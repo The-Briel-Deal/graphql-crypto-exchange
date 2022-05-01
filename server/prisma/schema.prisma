@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model buys {
+  order_id String  @id @db.Uuid
+  limit    Int
+  user_id  String? @db.Uuid
+}
+
+model sells {
+  order_id String @id @db.Uuid
+  limit    Int
+  user_id  String @db.Uuid
+}
+
+model users {
+  name    String @db.VarChar
+  user_id String @id @db.Uuid
+}
