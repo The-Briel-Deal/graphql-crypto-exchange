@@ -8,7 +8,7 @@ const typeDefs = gql`
     "This is the price of the buy limit order, be sure to divide by 100."
     limit: Int!
     "This is the user that created the order."
-    user: User!
+    user: User
   }
 
   "This is a sell order."
